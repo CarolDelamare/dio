@@ -144,9 +144,66 @@ e não verifica os próximos else if ou else.
 Por isso, a ordem das condições é importante.
 */
 
+
 /*
 ============================================================
-6. ESCOPO DE BLOCO
+6. OPERADORES LÓGICOS
+============================================================
+
+Os operadores lógicos permitem combinar ou inverter condições.
+
+&&  E (AND)
+||  OU (OR)
+!   NÃO / negação (NOT)
+
+
+&& - E
+
+Retorna true quando todas as condições forem verdadeiras.
+
+Exemplo:
+
+const idade = 20;
+
+idade >= 18 && idade < 60
+
+idade >= 18 -> true
+idade < 60  -> true
+
+true && true -> true
+
+
+|| - OU
+
+Retorna true quando pelo menos uma das condições for verdadeira.
+
+Exemplo:
+
+const tipoCombustivel = 1;
+
+tipoCombustivel === 1 || tipoCombustivel === 2
+
+true || false -> true
+
+
+! - NÃO / negação
+
+Inverte um valor booleano:
+
+true  -> false
+false -> true
+
+Exemplo:
+
+const ehNumeroPar = false;
+
+!ehNumeroPar -> true
+*/
+
+
+/*
+============================================================
+7. ESCOPO DE BLOCO
 ============================================================
 
 Visto no desafio "Viagem + Condicionais"
@@ -223,9 +280,10 @@ const valorGasto;
 pois const precisa receber um valor no momento da declaração.
 */
 
+
 /*
 ============================================================
-7. ATALHOS ÚTEIS DO VS CODE
+8. ATALHOS ÚTEIS DO VS CODE
 ============================================================
 
 Shift + Alt + ↓
