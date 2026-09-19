@@ -21,7 +21,7 @@ Exemplo:
 5 % 2 = 1
 1 === 0 -> false
 
-Portanto, numeroPar recebe false e seu tipo é boolean.
+Portanto, ehNumeroPar recebe false e seu tipo é boolean.
 
 Boa prática:
 Variáveis booleanas podem ter nomes que indiquem uma pergunta
@@ -69,22 +69,22 @@ Operadores de comparação:
 
 /*
 ============================================================
-3. CONDICIONAL IF
+3. CONDICIONAL - if
 ============================================================
 */
 
-if (ehNumeroPar) {             // Executa o bloco se numeroPar for true
+if (ehNumeroPar) {             // Executa o bloco se ehNumeroPar for true
     console.log('Par');
-} 
+}
 
 if (!ehNumeroPar) {            // ! significa negação: inverte true para false e false para true
     console.log('Ímpar');
-} 
+}
 
 
 /*
 ============================================================
-4. CONDICIONAL IF / ELSE
+4. CONDICIONAL - if / else
 ============================================================
 */
 
@@ -94,7 +94,7 @@ if (ehNumeroPar) {
     console.log('Par');
 } else {
     console.log('Ímpar');
-} // Se numeroPar for true executa o if; caso contrário, executa o else
+} // Se ehNumeroPar for true executa o if; caso contrário, executa o else
 
 
 // Divisibilidade por 5
@@ -107,9 +107,9 @@ if (ehDivisivelPor5) {
 
 
 /*
- ============================================================
- 5. CONDICIONAL IF / ELSE IF / ELSE
- ============================================================
+============================================================
+5. CONDICIONAL - if / else if / else
+============================================================
 */
 
 if (numero === 0) {
@@ -142,4 +142,104 @@ Ao encontrar uma condição verdadeira, o JavaScript executa esse bloco
 e não verifica os próximos else if ou else.
 
 Por isso, a ordem das condições é importante.
+*/
+
+/*
+============================================================
+6. ESCOPO DE BLOCO
+============================================================
+
+Visto no desafio "Viagem + Condicionais"
+
+Variáveis declaradas com let ou const dentro de um bloco { }
+possuem escopo de bloco.
+
+Um bloco é uma região do código delimitada por chaves { }.
+
+Exemplos de blocos:
+
+if (condicao) {
+    // bloco do if
+} else {
+    // bloco do else
+}
+
+Exemplo:
+
+if (condicao) {
+    const valorGasto = 50;
+}
+
+console.log(valorGasto); // ReferenceError
+
+valorGasto foi criada dentro do bloco do if e, portanto,
+não pode ser acessada fora dele.
+
+Também é possível declarar variáveis com o mesmo nome em
+blocos diferentes:
+
+if (condicao) {
+    const valorGasto = 50;
+} else {
+    const valorGasto = 100;
+}
+
+Nesse caso, são duas variáveis diferentes, pois cada uma
+pertence ao seu próprio bloco.
+
+Uma solução é utilizar a variável somente dentro do bloco:
+
+if (condicao) {
+    const valorGasto = 50;
+    console.log(valorGasto);
+} else {
+    const valorGasto = 100;
+    console.log(valorGasto);
+}
+
+Outra possibilidade é declarar a variável fora do bloco quando ela
+precisar ser utilizada posteriormente.
+
+Exemplo:
+
+let valorGasto;
+
+if (condicao) {
+    valorGasto = 50;
+} else {
+    valorGasto = 100;
+}
+
+console.log(valorGasto);
+
+Nesse caso, valorGasto é declarada fora do if e pode ser acessada
+depois da estrutura condicional.
+
+É necessário utilizar let porque o valor será atribuído posteriormente.
+Não seria possível declarar:
+
+const valorGasto;
+
+pois const precisa receber um valor no momento da declaração.
+*/
+
+/*
+============================================================
+7. ATALHOS ÚTEIS DO VS CODE
+============================================================
+
+Shift + Alt + ↓
+Duplica a linha atual para baixo.
+
+Shift + Alt + ↑
+Duplica a linha atual para cima.
+
+Shift + Alt + F
+Formata todo o documento automaticamente.
+
+Observação:
+Os atalhos podem ser alterados nas configurações do VS Code.
+
+Para consultar ou alterar os atalhos:
+Ctrl + K, depois Ctrl + S
 */
