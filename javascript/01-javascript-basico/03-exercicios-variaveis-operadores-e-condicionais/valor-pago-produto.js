@@ -12,20 +12,20 @@ Código Condição de pagamento:
 */
 
 const preco = 10;
-const tipoPagamento = 4; 
+const tipoPagamento = 4;
 
-let valorFinal; 
+let valorFinal;
 
 if (tipoPagamento === 1) {
-    valorFinal = preco * 0.9;    
+    valorFinal = preco * 0.9;
 } else if (tipoPagamento === 2) {
     valorFinal = preco * 0.85;
 } else if (tipoPagamento === 3) {
-    valorFinal = preco * 1;
+    valorFinal = preco;
 } else if (tipoPagamento === 4) {
     valorFinal = preco * 1.1;
 } else {
-    console.log('O tipo de pagamentoo informado é inválido ');
+    console.log('O tipo de pagamento informado é inválido.');
 }
 
 if (tipoPagamento === 1 || tipoPagamento === 2 || tipoPagamento === 3 || tipoPagamento === 4) {
