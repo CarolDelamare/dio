@@ -126,6 +126,9 @@ if (numero === 0) {
 else if:
 Permite testar uma nova condição quando a condição anterior for falsa.
 
+Podem ser utilizados vários blocos else if na mesma estrutura,
+de acordo com a quantidade de condições que precisam ser verificadas.
+
 A estrutura é verificada de cima para baixo:
 
 if      -> testa a primeira condição
