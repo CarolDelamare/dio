@@ -185,8 +185,63 @@ para quem a invocou.
 
 Esse valor retornado pode ser armazenado em uma variável ou utilizado
 diretamente em outra expressão.
+*/
 
+/*
+EXEMPLO IMPORTANTE - CÁLCULO SEM RETURN
 
+Uma função pode realizar um cálculo corretamente e, mesmo assim, não
+devolver o resultado para quem a invocou.
+
+Exemplo:
+
+function calcularMedia(nota1, nota2) {
+    const media = (nota1 + nota2) / 2;
+}
+
+console.log(calcularMedia(5, 5));
+
+Dentro da função:
+
+(5 + 5) / 2 = 5
+
+Portanto, a variável media recebe 5.
+
+Porém, a função não possui return. Assim, o valor 5 fica armazenado
+apenas na variável local media e não é devolvido para quem chamou a função.
+
+Por isso:
+
+calcularMedia(5, 5) -> undefined
+
+e:
+
+console.log(calcularMedia(5, 5));
+
+exibe:
+
+undefined
+
+Para devolver o resultado, seria necessário:
+
+function calcularMedia(nota1, nota2) {
+    const media = (nota1 + nota2) / 2;
+    return media;
+}
+
+Agora:
+
+calcularMedia(5, 5) -> 5
+
+IMPORTANTE:
+
+calcular um valor dentro da função não significa retornar esse valor.
+
+const media = ... -> calcula e armazena o valor dentro da função;
+return media;     -> devolve esse valor para quem invocou a função.
+*/
+
+/*
 3.1 PROCEDIMENTO X FUNÇÃO
 
 Em algumas linguagens de programação, é comum chamar de procedimento
